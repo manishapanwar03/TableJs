@@ -1,0 +1,268 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .div {
+            background-color: whitesmoke;
+            width: 90%;
+            display: flex;
+            margin-top: 30px;
+            margin-left: 100px;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        .a {
+            background-color: whitesmoke;
+            width: 35%;
+            margin-left: 7px;
+            height: 45px;
+            padding-top: 15px;
+        }
+        .div1 {
+            background-color: whitesmoke;
+            margin-top: 30px;
+            margin-left: 100px;
+            width: 30%;
+            color: black;
+            border: 2px solid black;
+            padding: 10px;
+            border-radius: 15px;
+        }
+        .button4 {
+            background-color: #555555;
+            color: black;
+        }
+        .button {
+            background-color: #555555;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 14px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div class="a"><center>A</center></div>
+        <div class="a"><center>B</center></div>
+        <div class="a"><center>C</center></div>
+    </div>
+    <center><h1 class="div1">HELLOOO WORLD</h1></center>
+    <center><button class="button button4" onclick="randomColor()">CLICK ME</button></center>
+    <script>
+        var color = ["red", "orange", "pink","green","black"];
+        var innerDivs = document.getElementsByClassName("a");
+        var h1 = document.querySelector('h1.div1');
+        var filledCount = 0;
+        var colorsUsed = new Set();
+
+        function randomColor() {
+            if (filledCount === innerDivs.length) {
+                if (confirm("All fields filled, Do you want to refill?")) {
+                    resetColors();
+                }
+                return;
+            }
+
+            var selectedColor;
+            do {
+                selectedColor = color[Math.floor(Math.random() * color.length)];
+            } while (colorsUsed.has(selectedColor));
+
+            var emptyDiv = getEmptyDiv();
+            if (emptyDiv) {
+                emptyDiv.style.backgroundColor = selectedColor;
+                h1.style.backgroundColor = selectedColor;
+                filledCount++;
+                colorsUsed.add(selectedColor);
+            }
+        }
+
+        function getEmptyDiv() {
+            for (var i = 0; i < innerDivs.length; i++) {
+                if (!innerDivs[i].style.backgroundColor || innerDivs[i].style.backgroundColor === "whitesmoke") {
+                    return innerDivs[i];
+                }
+            }
+            return null;
+        }
+
+        function resetColors() {
+            colorsUsed.clear();
+            filledCount = 0;
+            for (var i = 0; i < innerDivs.length; i++) {
+                innerDivs[i].style.backgroundColor = "whitesmoke";
+            }
+            h1.style.backgroundColor = "whitesmoke";
+        }
+    </script>
+</body>
+</html>
+
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+<script>
+    var p = prompt("Enter a password");
+var nm1 = /^(?!\d{12})(?!@#)(?=.*[A-Za-z])(?=.*\d)(?=.*[$!%*?&]).{12,}@gmail.com$/;
+var nm2 = /^.{1,12}$/;
+if (p === "") {
+  alert("Please enter a password.");}
+else if (!p.match(/[A-Za-z]/)) {
+  alert("Password should contain at least A-Z and a-z.");
+} else if(!p.match(/[0-9]/)){
+  alert("Password should contain  atleast one number .");}
+else if(!p.match(/[$!%*?&]/)){
+  alert("Password should contain  atleast one symbol and special symbol $ !  % * ? &");
+}else if(p.match(/^\d{12}/)){
+  alert("Password should not start with 12 numbers.")
+}else if (p.startsWith("@#")) {
+  alert("Password should not start with '@#'.");
+} else if (p.match(nm1)) {
+  alert("Invalid password. Password should contain at least 12 characters, one letter, one number, and one special symbol (@, $, !, %, *, ?, &).");
+}
+else if (p.match(nm2)) {
+  alert("Password should be more than 12 characters.");
+} 
+else{
+  alert("Valid password: " + p);
+}
+</script>
+<script>
+    var array1 = [1, 33, 3,56,33,34]; 
+var array2 = [2, 30, 1,33];
+
+var s=[...array1,...array2]
+// new set()
+// s=s.sort()
+for(var i=0;i<s.length;i++){
+  for(var j=i+1;j<s.length;j++){
+    if(s[i]===s[j]){
+      s.splice(j,1);
+      j--
+    }
+  }
+}
+
+for(var i=0;i<s.length;i++){
+  for(var j=0;j<s.length;j++)
+  {
+    if(s[j]>s[j+1]){
+      var t=s[j]
+      s[j]=s[j+1]
+      s[j+1]=t
+    }
+  }
+}
+alert(s)
+
+for (var i = 1; i <= 5; i++) {
+  if (i === 1 || i === 5) {
+    document.write("*****<br/>");
+  } else {
+    document.write("*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   *<br/>");
+  }
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+ -->
+ <!-- <script>
+  function reverseAlphabeticalChars(str) {
+  const alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let reversed = "";
+
+  // Separate the alphabetical characters and non-alphabetical characters
+  let alphaChars = "";
+  let nonAlphaChars = "";
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charAt(i);
+    if (alphabet.includes(char)) {
+      alphaChars += char;
+    } else {
+      nonAlphaChars += char;
+    }
+  }
+
+  // Reverse the alphabetical characters
+  let reversedAlphaChars = alphaChars.split("").reverse().join("");
+
+  // Reconstruct the final string with the reversed alphabetical characters and original non-alphabetical characters
+  let alphaIndex = 0;
+  let nonAlphaIndex = 0;
+  for (let i = 0; i < str.length; i++) {
+    const char = str.charAt(i);
+    if (alphabet.includes(char)) {
+      reversed += reversedAlphaChars.charAt(alphaIndex);
+      alphaIndex++;
+    } else {
+      reversed += nonAlphaChars.charAt(nonAlphaIndex);
+      nonAlphaIndex++;
+    }
+  }
+
+  return reversed;
+}
+
+var str = "ab0b@cd#";
+alert(reverseAlphabeticalChars(str)); // Output: "dcb0@ba#"
+ </script> -->
+<!-- <form name="myForm">
+    Number <input name="num" type="text" placeholder="starting number"></br></br>
+    Limit  <input name="limit" type="text" placeholder="ending number" value="10"></br></br>
+    <input type="button" value="n^2" onclick="return square()">
+    <input type="button" value="n^3" onclick="return cube()">
+    <input type="button" value="submit" onclick="return table()">
+</form>
+<div id="output"></div>
+<script>
+    function table() {
+        // Your existing table() function code
+        // ...
+    }
+
+    function square() {
+        var number = document.forms["myForm"]["num"].value;
+        if (!number.match(/^\d+/)) {
+            alert("Please only enter numeric characters only for your number! (Allowed input: 0-9)");
+        } else {
+            var num = parseInt(number);
+            var tableHtml = '<table><thead><th><th>Result</tr></th></thead><tbody>';
+            for (var i = 1; i <= num; i++) {
+                var result = num * i;
+                tableHtml += '<th><tr>&nbsp&nbsp' + i + ' x ' + num + ' = ' + result + '</tr></th>';
+            }
+            tableHtml += '</tbody></table>';
+            document.getElementById("output").innerHTML = tableHtml;
+        }
+    }
+
+    function cube() {
+        // Your existing cube() function code
+        // ...
+    }
+</script> -->
+   

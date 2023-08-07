@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="home.html"></script>
+  <script src="signup.html"></script>
+  <title>Bootstrap</title>
+  <style>
+    #msg {
+      color: red;
+    }
+
+    #nav {
+      color: white;
+    }
+
+    #nav1 {
+      color: white;
+    }
+    .second_header{
+      background-color: whitesmoke;
+      width: 50%;
+
+
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary bg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="school" id="nav1"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+          <img src="https://media.licdn.com/dms/image/C560BAQETcyZERGmCpw/company-logo_100_100/0/1641210365020?e=1698278400&v=beta&t=qtrX1gIbgY7YO9H29Aj-off0KYUTTDxfy83pJiAKhzg" height="40px" width="40px" style="border-radius:20px; margin-right: 40px; " />
+        </li>
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="home.html" id="nav">Home</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html" id="nav">About us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html" id="nav">Why</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html" id="nav">Admission</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html" id="nav">Contact us</a>
+          </li>
+       </ul>
+
+      </div>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2 justify-content-right" type="search" id="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success btn-success " class="btn btn-success btn-sm mb-1" type="submit">Search</button>
+      </form>
+      <li><a href="signup.html" style="border-radius: 9px; height: 40px;"  class="btn btn-primary"> Sign Up</a></li>
+     <li><a href="login.html" style="border-radius: 9px; height: 40px;"  class="btn btn-primary"> Login </a></li>
+     <li><a href="desindexjs.html" style="border-radius: 9px; height: 40px;"  class="btn btn-primary"> Logout</a></li>
+    </div>
+  </nav>
+  <section class="h-100 h-custom" style="display: flex;    background-color: gray; background-repeat: no-repeat; height: ;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-left align-items-left h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Result</h3>
+              <form class="px-md-2" id="resultForm">
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="name">Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Enter your name" required />
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="result">Result</label>
+                  <input type="text" id="result" class="form-control" placeholder="Enter your total" required />
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="total">Total</label>
+                  <input type="text" id="total" class="form-control" placeholder="Enter your total" required />
+                </div>
+                <div class="form-outline mb-4">
+                  <label class="form-label" for="gain">Gain</label>
+                  <input type="text" id="gain" class="form-control" placeholder="Enter your gain" required />
+                </div>
+                <button type="submit" class="btn btn-success btn-lg mb-1" onclick="addData(event)">Submit</button>
+                <button type="button" onclick="resetForm()" class="btn btn-secondary btn-lg mb-1">Reset</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5 h-75 ">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-12">
+          <div class="card rounded-3">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Result Table</h3>
+              <table class="table" id="resultTable">
+                <thead>
+               
+                  
+                </thead>
+                <tbody id="resultTableBody">
+                  <p id="msg"></p>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+   <center><div class="second_header">
+    <h2 style="padding-top: 50px;color: black;">Technologies We Work On</h2>
+      <h6 style="padding-top: 30px;color: black;">We help our partners accelerate disruption both within their organizations and industries. They strategize new ideas and obtain real business value by getting the most out of our production-ready custom software development services. Talk to our experts today!</h6>
+
+   </div><center>
+
+  <script>
+    let editingIndex = -1;
+
+    function addData(event) {
+      event.preventDefault(); // Prevent form submission and page reload
+
+      const name = document.getElementById('name').value;
+      const result = document.getElementById('result').value;
+      const total = document.getElementById('total').value;
+      const gain = document.getElementById('gain').value;
+
+      if (!name || !result || !total || !gain) {
+        document.getElementById('msg').innerHTML = "Please fill in all fields.";
+        return;
+      }
+
+      if (isNaN(total) || isNaN(gain) || total < 0 || gain < 0) {
+        document.getElementById('msg').innerHTML = "Total and Gain must be non-negative numbers.";
+        return;
+      }
+
+      if (total < gain) {
+        document.getElementById('msg').innerHTML = "Total must be greater than or equal to Gain.";
+        return;
+      }
+
+      const data = {
+        name,
+        result,
+        total,
+        gain
+      };
+
+      let arr = JSON.parse(localStorage.getItem('crud'));
+      if (!arr) {
+        arr = [];
+      }
+
+      if (editingIndex !== -1) {
+        arr[editingIndex] = data;
+        editingIndex = -1;
+        document.getElementById('msg').innerHTML = "Data updated";
+      } else {
+        arr.push(data);
+        document.getElementById('msg').innerHTML = "Data added";
+      }
+
+      localStorage.setItem('crud', JSON.stringify(arr));
+      document.getElementById('name').value = "";
+      document.getElementById('result').value = "";
+      document.getElementById('total').value = "";
+      document.getElementById('gain').value = "";
+      displayData();
+    }
+
+    function editData(index) {
+      const arr = JSON.parse(localStorage.getItem('crud'));
+      if (arr && arr.length > index) {
+        const data = arr[index];
+        document.getElementById('name').value = data.name;
+        document.getElementById('result').value = data.result;
+        document.getElementById('total').value = data.total;
+        document.getElementById('gain').value = data.gain;
+        editingIndex = index; // Set the editingIndex to the current index being edited.
+        document.getElementById('msg').innerHTML = "Editing data. Click 'Submit' to save changes.";
+      }
+    }
+
+    function deleteData(index) {
+      const arr = JSON.parse(localStorage.getItem('crud'));
+      if (arr && arr.length > index) {
+        arr.splice(index, 1);
+        localStorage.setItem('crud', JSON.stringify(arr));
+        displayData();
+        document.getElementById('msg').innerHTML = "Data deleted";
+      }
+    }
+    function displayData() {
+      const arr = JSON.parse(localStorage.getItem('crud'));
+      const searchQuery = document.getElementById('search').value.toLowerCase(); // Get the search query and convert to lowercase
+
+      if (arr && arr.length > 0) {
+        let tableHtml = '<tr><th>Name</th><th>Result</th><th>Total</th><th>Gain</th><th>Edit</th><th>Delete</th></tr>';
+
+        arr.forEach((data, index) => {
+          // Convert all data to lowercase for case-insensitive search
+          const name = data.name.toLowerCase();
+          const result = data.result.toLowerCase();
+          const total = data.total.toLowerCase();
+          const gain = data.gain.toLowerCase();
+
+          // Check if any of the data fields contains the search query
+          if (name.includes(searchQuery) || result.includes(searchQuery) || total.includes(searchQuery) || gain.includes(searchQuery)) {
+            tableHtml += `<tr><td>${data.name}</td><td>${data.result}</td><td>${data.total}</td><td>${data.gain}</td>`;
+             tableHtml += `<td><button style="background-color: green;" onclick="editData(${index})" class="btn btn-success btn-sm mb-1">Edit</button>
+</td>`;
+        tableHtml += `<td><button style="background-color: red;" onclick="deleteData(${index})" class="btn btn-success btn-sm mb-1">Delete</button></td></tr>`;
+          }
+        });
+
+        if (tableHtml === '<tr><th>Name</th><th>Result</th><th>Total</th><th>Gain</th><th>Edit</th><th>Delete</th></tr>') {
+          tableHtml += '<tr><td colspan="6">No matching data found.</td></tr>';
+
+        }
+
+        document.getElementById('resultTableBody').innerHTML = tableHtml; // Fix the ID to update the correct table body
+      } else {
+        document.getElementById('resultTableBody').innerHTML = '<tr><td colspan="6">No data available.</td></tr>'; // Fix the ID to update the correct table body
+      }
+    }
+
+    
+
+    function resetForm() {
+      document.getElementById('name').value = "";
+      document.getElementById('result').value = "";
+      document.getElementById('total').value = "";
+      document.getElementById('gain').value = "";
+      editingIndex = -1;
+      document.getElementById('msg').innerHTML = "";
+    }
+
+   
+    document.getElementById('resultForm').addEventListener('submit', addData);
+
+   
+    document.getElementById('search').addEventListener('input', displayData);
+
+
+    displayData();
+  </script>
+</body>
+</html>
+ 

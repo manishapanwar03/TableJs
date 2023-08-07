@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        /* CSS styles as before... */
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <div class="a"><center>A</center></div>
+        <div class="a"><center>B</center></div>
+        <div class="a"><center>C</center></div>
+    </div>
+    <center><h1 class="div1">""""HELLOOO WORLD"""""</h1></center>
+    <center><button class="button button4" onclick="randomColor()">CLICK ME</button></center>
+
+    <script>
+        var color = ["red", "orange", "pink"];
+        var innerDivs = document.getElementsByClassName("a");
+        var h1 = document.querySelector('h1.div1');
+
+        function randomColor() {
+            for (var i = 0; i < innerDivs.length; i++) {
+                var randomIndex = Math.floor(Math.random() * color.length);
+                var selectedColor = color[randomIndex];
+
+                if (innerDivs[i].style.backgroundColor !== selectedColor) {
+                    innerDivs[i].style.backgroundColor = selectedColor;
+                } else {
+                    // If the same color is selected, decrement 'i'
+                    i--;
+                }
+            }
+            
+            var randomIndex = Math.floor(Math.random() * color.length);
+            h1.style.backgroundColor = color[randomIndex];
+        }
+    </script>
+</body>
+</html>

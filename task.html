@@ -1,0 +1,195 @@
+<!-- <script>
+	var a=[10,50,30,20,70,80]
+	var b=[20,30,10,50,40,10]
+	let l1=a.length-1
+	// console.log(l1)
+	var d1=[]
+	for(var i=0;i<a.length;i++)
+	{
+		if(a[i]>=50)
+		{
+			var c=a.indexOf(a[i])
+			// console.log(c);
+			if(c===l1)
+			{
+				continue
+			}
+			else{
+				d1.push(c+1)
+			}
+		}
+	}
+	 for(var i of d1){
+	 	a[i]*=2
+	 	// console.log(a[i])
+	 }
+
+	var l2=b.length-1
+	// console.log(l2)
+	var d2=[]
+	for(var j=0;j<b.length;j++)
+	{
+		if(b[j]>=50)
+		{
+			var c=b.indexOf(b[j])
+			// console.log(c);
+			if(c===l2)
+			{
+				continue
+			}
+			else{
+				d2.push(c+1)
+			}
+		}
+	}
+	 for(var j of d2){
+	 	b[j]*=2
+	 	// console.log(b[i])
+	 }
+	 console.log(a);
+	 console.log(b);
+
+	 // sum of array
+	  var sa=0;
+	  var sb=0;
+	 var sa=a.reduce((r,v)=>r+v,0)
+	 var sb=b.reduce((r,v)=>r+v,0 )
+	 console.log(sa)
+	 console.log(sb)
+
+
+	 
+	 if(sa>sb){
+	 	console.log(" A wins"+sa)
+	 }
+	 else{
+	 	console.log("B wins"+sb
+
+	 		)
+	 }
+	
+</script>
+let myNums = [10,50,60,20,70,160]
+
+
+function sumNums(ar){
+let sum = 0
+    for (let i = 0; i < ar.length; i++ ) {
+      sum += ar[i];
+    }
+    return sum
+}
+console.log(sumNums([1,2,4]));
+	 
+ -->
+
+ // GAME
+<!-- <script>
+	let a=[10,50,30,20,70,20]
+	let b=[20,30,20,50,40,90]
+	function game(p1,p2){
+		let l1=p1.length-1
+		// 
+		let d1=[]
+		for(let i=0;i<p1.length;i++)
+		{
+			if(p1[i]>=50){
+				let c=p1.indexOf(p1[i])
+				if(c===l1)
+				{
+					continue
+				}
+				else{
+					d1.push(c+1)
+				}
+			}
+		}
+		// console.log(d1)
+		for(let i of d1)
+		{
+			p1[i]*=2
+			// console.log(a[i])
+		}
+
+
+	var l2=p2.length-1
+	// console.log(l2)
+	var d2=[]
+	for(var j=0;j<p2.length;j++)
+	{
+		if(p2[j]>=50)
+		{
+			var c=p2.indexOf(p2[j])
+			// console.log(c);
+			if(c===l2)
+			{
+				continue
+			}
+			else{
+				d2.push(c+1)
+			}
+		}
+	}
+	 for(var j of d2){
+	 	p2[j]*=2
+	 	// console.log(b[i])
+	 }
+	 console.log(p1);
+	 console.log(p2);
+
+	 function sumNums(ar){
+     let sum = 0
+     for (let i = 0; i < ar.length; i++ ) {
+      sum += ar[i];
+      }
+      return sum
+     }
+    console.log(sumNums(p1));
+    function sumNums(ar){
+     let sum = 0
+     for (let j = 0; j < ar.length; j++ ) {
+      sum += ar[j];
+      }
+      return sum
+     }
+    console.log(sumNums(p2));
+     if (sumNums(p1)>sumNums(p2)){
+     	console.log("A wins" +sumNums(p1))
+     }
+     else{
+     	console.log("B wins"+  sumNums(p2))
+     }
+
+	}
+	game(a,b)
+</script> -->
+
+<script>
+	// function duplicate(a) {
+    //     var o = [];
+    //     var r = [];
+
+    //     a.forEach(function (i) {
+    //       if(!o[i])
+    //           o[i] = 0;
+    //         o[i] += 1;
+    //     })
+
+    //     for (var j in o) {
+    //        if(o[j] >= 2) {
+    //            r.push(j);
+    //        }
+    //     }
+
+    //     return r;
+
+    // }
+
+    // console.log(duplicate([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));
+
+	
+
+
+</script>
+
+

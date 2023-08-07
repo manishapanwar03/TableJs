@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Company task</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    .div {
+      width: 90%;
+      height: 50%;
+      background-color: green;
+      display: flex;
+      margin-left: 100px;
+      margin-top: 30px;
+    }
+    .div1 {
+
+    }
+    .a {
+      background-color: orange;
+      width: 35%;
+    }
+    .b {
+      background-color: red;
+      width: 35%;
+    }
+    .c {
+      background-color: orange;
+      width: 35%;
+    }
+    .click {
+      color: orange;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="div">
+    <div class="a"><center>A</center></div>
+    <div class="b"><center>B</center></div>
+    <div class="c"><center>C</center></div>
+  </div>
+  <center><h1 class="div1">"""Hello World""""</h1></center>
+  <center><button onclick="randomColor()" class="click">Click me</button></center>
+
+  <script>
+    var originalColors = [];
+
+    function saveOriginalColors() {
+      var elements = document.getElementsByClassName("div");
+      for (var i = 0; i < elements.length; i++) {
+        var innerDivs = elements[i].getElementsByTagName("div");
+        var innerDivColors = [];
+        for (var j = 0; j < innerDivs.length; j++) {
+          innerDivColors.push(innerDivs[j].style.backgroundColor);
+        }
+        originalColors.push(innerDivColors);
+      }
+    }
+
+    function resetColors() {
+      var elements = document.getElementsByClassName("div");
+      for (var i = 0; i < elements.length; i++) {
+        var innerDivs = elements[i].getElementsByTagName("div");
+        var originalInnerDivColors = originalColors[i];
+        for (var j = 0; j < innerDivs.length; j++) {
+          innerDivs[j].style.backgroundColor = originalInnerDivColors[j];
+        }
+      }
+    }
+
+    function randomColor() {
+      var color = ["red", "blue", "green", "orange", "pink"];
+      var elements = document.getElementsByClassName("div");
+      for (var i = 0; i < elements.length; i++) {
+        var innerDivs = elements[i].getElementsByTagName("div");
+        for (var j = 0; j < innerDivs.length; j++) {
+          innerDivs[j].style.backgroundColor = color[Math.floor(Math.random() * color.length)];
+        }
+      }
+    }
+
+    // Save original colors when the page loads
+    window.onload = function() {
+      saveOriginalColors();
+    };
+  </script>
+</body>
+</html>
